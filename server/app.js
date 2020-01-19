@@ -1,4 +1,3 @@
-
 const express = require('express');
 const ejs = require('ejs');
 const fs = require('fs').promises;
@@ -7,15 +6,10 @@ const path = require('path');
 const app = express();
 const port = 8181;
 
-//app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static(path.join(__dirname, '../client/build'),{
     extensions: ['js', 'css'],
     index:false,
 }));
-
-//app.use('/static/css*',express.static(path.join(__dirname, '../client/build')));
-
-//app.use('/manifest*',express.static(path.join(__dirname, '../client/build')));
 
 app.get('/', async (req, res) => {
     const preloadedState = {
