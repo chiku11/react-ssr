@@ -2,13 +2,5 @@ const initialState = {
     texts: ["hello"]
 };
 
-const slideReducer = (state=initialState, action) => {
-    switch(action.type) {
-        case 'show':
-            return state;
-        default:
-            return state;
-    }
-}
-
+const slideReducer = (state=initialState) => (state);
 export default slideReducer;
